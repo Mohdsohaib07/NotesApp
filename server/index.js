@@ -7,7 +7,12 @@ import cors from 'cors';
 const app = express();
 // middleware to parse json data
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: '*', // Allow requests from your frontend domain
+        methods: ['GET', 'POST', 'PUT', 'DELETE']
+    }
+));
 const PORT = process.env.PORT || 8080;
 
 //user Routes
