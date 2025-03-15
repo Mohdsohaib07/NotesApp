@@ -1,0 +1,54 @@
+
+.menuModal_container_overlay{
+    width:100vw;
+    height:100vh;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top:0;
+    display: grid;
+    place-items: center;
+}
+.menuModal_container{
+    width: 500px;
+    height: 150px;
+    background-color: rgba(140, 76, 192, 0.781);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    padding:10px;
+}
+.notes_upSection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
+  padding:10px;
+}
+.notes_upSection h3{
+    font-size: 1.4em;
+}
+.notes_upSection .icon{
+   font-size: 1.8em;
+   cursor: pointer;
+   transition: all 0.2s ease;
+
+}
+.notes_upSection .icon:hover{
+   transform: scale(1.2);
+   color:red;
+   outline:1px solid white;
+ }
+
+ .notes_bottomSection{
+    display: flex;
+    justify-content: space-evenly;
+    width:inherit;
+ }
+ .notes_bottomSection button{
+    border:none;
+    padding:8px 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor:pointer;
+ }

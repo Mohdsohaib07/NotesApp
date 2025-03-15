@@ -1,0 +1,32 @@
+.card_container{
+    width:250px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    row-gap: 20px;
+    border:1px solid red;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.card_container:hover{
+    transform: scale(1.02);
+}
+.title_section{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.icon{
+    font-size:24px;
+    color:red;
+    cursor:pointer;
+    transition: all 0.2s ease;  
+}
+.icon:hover{
+    font-size:28px;
+    color:purple;
+}
