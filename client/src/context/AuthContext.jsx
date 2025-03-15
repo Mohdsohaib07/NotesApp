@@ -12,7 +12,7 @@ const AuthContextProvider = ({children}) => {
     // const [isAuthenticated,setIsAuthenticated]=useState(false);
 
 async function login(data){
-   const response = await axios.post('http://localhost:8080/login',{email:data.email,password:data.password});
+   const response = await axios.post('https://notes-app-server-vert.vercel.app/login',{email:data.email,password:data.password});
    console.log('login response ',response.data);
    setToken(response.data.token);
    localStorage.setItem('token',response.data.token);
@@ -20,7 +20,7 @@ async function login(data){
 }
 async function signup(data){
   try {
-    const response = await axios.post('http://localhost:8080/signup',{name:data.name,email:data.email,password:data.password});
+    const response = await axios.post('https://notes-app-server-vert.vercel.app/signup',{name:data.name,email:data.email,password:data.password});
     console.log(response.data);
     if(response.data){
       setToken(response.data.token);

@@ -15,7 +15,6 @@ const Header = () => {
     const confirmBox = window.confirm('confirm Logout ?');
     console.log(confirmBox);
      if(confirmBox){
-    
        navigate('/');
      }
   }
