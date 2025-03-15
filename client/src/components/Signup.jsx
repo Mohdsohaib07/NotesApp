@@ -31,8 +31,6 @@ function handleChange(e){
 
 function handleSubmit(e){
   e.preventDefault();
-console.log(e.target.value);
-
   signup({name,email,password});
   navigate('/home');
   
