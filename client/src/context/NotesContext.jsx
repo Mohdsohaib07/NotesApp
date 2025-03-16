@@ -81,7 +81,7 @@ async function editNote(id,data) {
         }});
         console.log(res.data);
         toast.success(res.data.message);
-        getNotes();
+       return getNotes();
     } catch (error) {
         console.log(error.message);
         
