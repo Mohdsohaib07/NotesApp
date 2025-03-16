@@ -20,6 +20,7 @@ const PORT = process.env.PORT || 8080;
 app.use(router);
 //notes routes
 app.use(noteRouter);
+//sample welcome
 app.get('/welcome',(req,res)=>{
    return res.status(200).send('welcome to our notes server');
 });

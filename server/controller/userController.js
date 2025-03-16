@@ -1,4 +1,4 @@
-import {UserModel} from '../model/userModel.js';
+import {User} from '../model/User.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import 'dotenv/config';
@@ -8,14 +8,14 @@ import 'dotenv/config';
 export const signUp = async(req,res)=>{
   console.log(req.body.name);
     try {
-        const existingUser = await UserModel.findOne({email:req.body.email});
+        const existingUser = await User.findOne({email:req.body.email});
         if(existingUser){
             console.log(existingUser);
        return res.status(400).send('user already exists');
         }
         //hashing user's password 
         const hashedPassword = await bcrypt.hash(req.body.password,8);
-        const user =  new UserModel({name:req.body.name,email:req.body.email,password:hashedPassword});
+        const user =  new User({name:req.body.name,email:req.body.email,password:hashedPassword});
         await user.save();
         console.log('user created sucessfully');
         const token = jwt.sign({email:req.body.email},process.env.SECRET_KEY);
@@ -31,7 +31,7 @@ export const login = async (req,res)=>{
     try {
    
      
-      const userr = await UserModel.findOne({email:req.body.email});
+      const userr = await User.findOne({email:req.body.email});
       if(!userr){
         return  res.status(403).send('no such user exists');
       }
