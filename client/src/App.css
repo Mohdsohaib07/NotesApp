@@ -5,7 +5,12 @@
     align-items: center;
     gap: 20px;
 }
-
+.home-search-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -135,4 +140,25 @@
 .show-note-container p{
     align-self: flex-start;
     font-size: 18px;
+}
+@media (max-width:600px){
+    .home_container{
+        gap:10px;
+    }
+    .add-note-container{
+        width: 100%;
+    }
+    .add-note-container .add-form{
+        width: 90%;
+        
+    }
+    .add-form-input{
+        width: 340px;
+    }
+    .add-form-textarea{
+        width: 340px;
+    }
+    .show-note-container{
+        width: 90%;
+    }
 }

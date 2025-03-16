@@ -25,7 +25,6 @@ async function signup(data){
     if(response.data){
       setToken(response.data.token);
       localStorage.setItem('token',response.data.token);
-
     }
   } catch (error) {
     console.log(error.message);

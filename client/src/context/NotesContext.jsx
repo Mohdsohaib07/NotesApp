@@ -12,7 +12,7 @@ export const notesContext = createContext(null);
 export const NotesProvider =({children})=>{
     const [notes,setNotes]= useState('');
     const [loading,setLoading]= useState(true);
-    const {token,isAuthenticated}=useContext(AuthContext);
+    const {token}=useContext(AuthContext);
 //read all notes
 async function getNotes(){
   

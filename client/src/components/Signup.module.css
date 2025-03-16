@@ -49,3 +49,13 @@
     cursor: pointer;
     border-radius: 3px;
 }
+@media (max-width:600px){
+    .form_container{
+        width: 90%;
+    }
+    .form{
+      width: 100%;
+    }
+
+   
+}

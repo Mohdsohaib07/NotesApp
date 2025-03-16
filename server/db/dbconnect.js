@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import 'dotenv/config'
-
+const url = 'mongodb+srv://todoappuser:${process.env.PASSWORD}@cluster0.mxg05.mongodb.net/NotesDB?retryWrites=true&w=majority&appName=Cluster0';
 async function dbConnect() {
     try {
         await mongoose.connect(`mongodb+srv://todoappuser:${process.env.PASSWORD}@cluster0.mxg05.mongodb.net/NotesDB?retryWrites=true&w=majority&appName=Cluster0`,
