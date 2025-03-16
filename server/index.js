@@ -15,7 +15,8 @@ app.use(cors(
     }
 ));
 const PORT = process.env.PORT || 8080;
-
+ //connecting to the database
+ dbConnect();
 //user Routes
 app.use(router);
 //notes routes
@@ -27,7 +28,6 @@ app.get('/welcome',(req,res)=>{
 
 app.listen(PORT,()=>{
     console.log(`server started on port ${PORT}`);
-    //connecting to the database
-    dbConnect();
+
 }
 );
