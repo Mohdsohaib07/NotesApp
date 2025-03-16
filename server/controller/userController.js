@@ -19,11 +19,11 @@ export const signUp = async(req,res)=>{
         await user.save();
         console.log('user created sucessfully');
         const token = jwt.sign({email:req.body.email},process.env.SECRET_KEY);
-        res.status(201).json({token});
+       return  res.status(201).json({token});
         
     } catch (error) {
         console.log(error.message);
-        res.status(500).send(error.message);  
+       return res.status(500).send(error.message);  
     }
 }
 
