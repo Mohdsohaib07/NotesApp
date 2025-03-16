@@ -24,7 +24,7 @@ const EditNote = () => {
       title:title,
       text:text
     }
-    editNote(note._id,data)
+    editNote(note._id,data);
     setTitle('');
     setText('');
     navigate('/home');
