@@ -18,7 +18,7 @@ async function getNotes(){
   
         try {
             if(token){
-            let response = await axios.get('https://notes-app-server-vert.vercel.app/note',
+            let response = await axios.get('https://notes-app-server-snowy.vercel.app/note',
                 {headers:{
                 "authorization":token
             }});
@@ -48,7 +48,7 @@ async function getNotes(){
     try {
         const confirmBox= confirm('are You sure?');
         if(confirmBox==true){
-        const res = await axios.delete(`https://notes-app-server-vert.vercel.app/note/${id}`,{headers:{
+        const res = await axios.delete(`https://notes-app-server-snowy.vercel.app/note/${id}`,{headers:{
             "Authorization":token
           }});
           toast.success(res.data.message);
@@ -63,7 +63,7 @@ async function getNotes(){
  //add note
 async function addNewNote(data){
         try {
-            const response = await axios.post('https://notes-app-server-vert.vercel.app/note',data,{headers:{
+            const response = await axios.post('https://notes-app-server-snowy.vercel.app/note',data,{headers:{
                 "Authorization":token
               }});
               console.log(response.data.message);
@@ -76,7 +76,7 @@ async function addNewNote(data){
 //edit note
 async function editNote(id,data) {
     try {
-        const res = await axios.patch(`https://notes-app-server-vert.vercel.app/note/${id}`,data,{headers:{
+        const res = await axios.patch(`https://notes-app-server-snowy.vercel.app/note/${id}`,data,{headers:{
             "Authorization":token
         }});
         console.log(res.data);
