@@ -38,9 +38,9 @@ function handleSubmit(e){
     <div className={`${styles.form_container}`}>
       <h2 className={`${styles.h1}`}>Login</h2>
       <form className={`${styles.form}`} onSubmit={handleSubmit}>
-        <label htmlFor="email"className={`${styles.label}`}>Email
+        <label htmlFor="email"className={`${styles.label}`} required>Email
         <input type="email" name='email' className={`${styles.input}`} value={email} onChange={handleChange}/></label>
-        <label htmlFor="password"className={`${styles.label}`}>Password
+        <label htmlFor="password"className={`${styles.label}`} required>Password
         <input type="password" name='password' className={`${styles.input}`} value={password} onChange={handleChange}/></label>
         <button  className={`${styles.button}`}>Log In</button>
       </form>
